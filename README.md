@@ -12,7 +12,7 @@ De Zilveren Kruis code challenge is een laagdrempelige front-end opdracht waarbi
 
 Bij Zilveren Kruis werken we veel met formulieren. Formulieren om je zorgkosten te melden, een nieuwe verzekering af te sluiten, etc.
 
-Deze formulieren zijn vaak gebouwd in Vue.
+Deze formulieren zijn vaak gebouwd in Vue 3 en bij voorkeur met TypeScript.
 
 In deze code challenge ga je aan de slag met een voorbeeldformulier. De styling (we gebruiken voor deze challenge [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)) en html is al klaar maar we missen nog wat functionaliteit.
 
@@ -89,10 +89,11 @@ Bouw het voorbeeldformulier (zie src/App.vue voor de huidige html) verder af. We
     -   BSN validatie
         -   Is de ingevoerde waarde invalid? Toon dan de volgende error-message (on-blur van het veld): "Helaas is het ingevoerde burgerservicenummer niet geldig. Probeer het opnieuw."
 -   Splits de html op in logische Vue componenten
+-   Gebruik bij voorkeur TypeScript. Je kunt hier direct mee aan de slag.
 
 ## Extra uitdaging?
 
--   Wil je laten zien wat je nog meer kunt? Kun je bijvoorbeeld al unit testen schrijven, heb je ervaring met VueX en Vue-Router, dan mag je huidige opzet omzetten naar losse routes. Ga lekker aan de gang met je eigen idee en laat ons zien wat je kunt!
+-   Wil je laten zien wat je nog meer kunt? Kun je bijvoorbeeld al unit testen schrijven, heb je ervaring met Pinia/VueX en Vue-Router, dan mag je huidige opzet omzetten naar losse routes. Ga lekker aan de gang met je eigen idee en laat ons zien wat je kunt!
 
 ## Randvoorwaarden
 
@@ -115,7 +116,7 @@ npm ci
 npm run dev
 ```
 
-Voer `npm run dev` uit voor een development server. Navigeer naar `http://localhost:8080/`. De app zal automatisch herladen na het maken van een wijziging.
+Voer `npm run dev` uit voor een development server. Navigeer naar `http://localhost:5173/`. De app zal automatisch herladen na het maken van een wijziging.
 
 ### Unit tests
 
@@ -123,4 +124,4 @@ Voer `npm run dev` uit voor een development server. Navigeer naar `http://localh
 npm run test:unit
 ```
 
-Voer `npm run test:unit` uit om unit tests te draaien met [Jest](https://jestjs.io/)
+Voer `npm run test:unit` uit om unit tests te draaien met [Vitest](https://vitest.dev/)
