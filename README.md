@@ -12,7 +12,7 @@ De Zilveren Kruis code challenge is een laagdrempelige front-end opdracht waarbi
 
 Bij Zilveren Kruis werken we veel met formulieren. Formulieren om je zorgkosten te melden, een nieuwe verzekering af te sluiten, etc.
 
-Deze formulieren zijn vaak gebouwd in Vue 3 en bij voorkeur met TypeScript.
+Deze formulieren zijn gebouwd met Vue 3 en TypeScript.
 
 In deze code challenge ga je aan de slag met een voorbeeldformulier. De styling (we gebruiken voor deze challenge [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)) en html is al klaar maar we missen nog wat functionaliteit.
 
@@ -22,7 +22,7 @@ Het wachtwoord is `ZK2022!`.
 
 ### Requirements:
 
-Bouw het voorbeeldformulier (zie src/App.vue voor de huidige html) verder af. We verwachten dat je applicatie in ieder geval (een deel van) de volgende requirements bevat:
+Bouw het voorbeeldformulier (zie `src/components/App/App.vue` voor de huidige html) verder af. We verwachten dat je applicatie in ieder geval (een deel van) de volgende requirements bevat:
 
 ## Functionaliteiten:
 
@@ -89,7 +89,7 @@ Bouw het voorbeeldformulier (zie src/App.vue voor de huidige html) verder af. We
     -   BSN validatie
         -   Is de ingevoerde waarde invalid? Toon dan de volgende error-message (on-blur van het veld): "Helaas is het ingevoerde burgerservicenummer niet geldig. Probeer het opnieuw."
 -   Splits de html op in logische Vue componenten
--   Gebruik bij voorkeur TypeScript. Je kunt hier direct mee aan de slag.
+-   Gebruik voor het uitwerken van het formulier TypeScript. Je kunt hier direct mee aan de slag.
 
 ## Extra uitdaging?
 
