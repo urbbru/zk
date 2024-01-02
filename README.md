@@ -2,7 +2,7 @@
 
 Super tof dat je interesse hebt om bij Zilveren Kruis aan de slag te gaan! We werken elke dag met een grote groep van developers aan de website van Zilveren Kruis. Deze groep van developers willen we heel graag uitbreiden. Daarbij vinden we opleiding, werkervaring of achtergrond eigenlijk helemaal niet zo waardevol. Belangrijker is dat je talent hebt en de juiste motivatie. Daarom kun je bij ons ook solliciteren op de vacature Front-end Developer door mee te doen aan onze code challenge.
 
-Bekijk de vacature op [werkenbijachmea.nl](https://werkenbijachmea.nl/vacature/front-end-developer-leiden/).
+Bekijk de vacature op [werkenbijachmea.nl](https://www.werkenbijachmea.nl/vacatures/front-end-developer-zilveren-kruis-leiden-a0wqs0000015xsbiam).
 
 ## Wat is de Zilveren Kruis code challenge?
 
