@@ -23,19 +23,31 @@
         <div class="form-input my-4">
             <div class="input__group">
                 <label class="input__title">Naam</label>
-                <input class="input__field form-control" type="text" />
+                <input
+                    class="input__field form-control"
+                    type="text"
+                    v-model="naam"
+                />
             </div>
         </div>
         <div class="form-input my-4">
             <div class="input__group">
                 <label class="input__title"> Tussenvoegsels </label>
-                <input class="input__field form-control" type="text" />
+                <input
+                    class="input__field form-control"
+                    type="text"
+                    v-model="tussenvoegsels"
+                />
             </div>
         </div>
         <div class="form-input my-4">
             <div class="input__group">
                 <label class="input__title">Achternaam</label>
-                <input class="input__field form-control" type="text" />
+                <input
+                    class="input__field form-control"
+                    type="text"
+                    v-model="achternaam"
+                />
             </div>
         </div>
         <div class="form-input my-4">
@@ -47,7 +59,8 @@
                             id="man"
                             class="radio__input custom-control-input"
                             type="radio"
-                            name="geslacht"
+                            v-model="geslacht"
+                            :value="man"
                         />
                         <label
                             class="radio__label custom-control-label"
@@ -58,10 +71,11 @@
                     </div>
                     <div class="radio custom-radio radio__option">
                         <input
-                            id="vrouw"
                             class="radio__input custom-control-input"
+                            id="vrouw"
                             type="radio"
-                            name="geslacht"
+                            v-model="geslacht"
+                            :value="vrouw"
                         />
                         <label
                             class="radio__label custom-control-label"
@@ -76,26 +90,67 @@
         <div class="form-input my-4">
             <div class="input__group">
                 <label class="input__title"> Geboortedatum </label>
-                <input class="input__field form-control" type="text" />
+                <input
+                    class="input__field form-control"
+                    type="date"
+                    v-model="geboortedatum"
+                />
             </div>
         </div>
         <div class="form-input my-4">
             <div class="input__group">
                 <label class="input__title"> Burgerservicenummer </label>
                 <input
-                    class="input__field form-control is-invalid"
+                    class="input__field form-control bsn is-invalid"
                     type="text"
+                    v-model="bsn"
+                    @blur="validateBSN"
                 />
             </div>
             <div
                 class="input__feedback invalid-feedback mt-1"
                 aria-live="polite"
+                v-if="errors.bsn"
             >
-                <span
-                    >Helaas is het ingevoerde burgerservicenummer niet geldig.
-                    Probeer het opnieuw.</span
-                >
+                <span class="bsn-error">{{ errors.bsn }}</span>
             </div>
         </div>
+        <button @click="se">se</button>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            naam: '',
+            tussenvoegsels: '',
+            achternaam: '',
+            geslacht: '',
+            geboortedatum: '',
+            bsn: '',
+            man: 'man',
+            vrouw: 'vrouw',
+            errors: {}
+        };
+    },
+    methods: {
+        validateBSN() {
+            const pattern = /^\d{9}$/;
+            const isValid = pattern.test(this.bsn);
+
+            if (!isValid) {
+                this.errors.bsn =
+                    'Helaas is het ingevoerde burgerservicenummer niet geldig. Probeer het opnieuw.';
+            } else {
+                if (this.errors.bsn) {
+                    delete this.errors.bsn;
+                }
+            }
+        },
+        se() {
+            console.log({ geslacht: this.geslacht });
+        }
+    }
+};
+</script>
