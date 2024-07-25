@@ -13,11 +13,12 @@
                 <div class="radio__tile">
                     <div class="radio custom-radio radio__option">
                         <input
-                            value="Basis Budget"
                             type="radio"
                             name="radio-insurance"
                             id="radio-insurance-basis-budget"
                             class="radio__input custom-control-input"
+                            v-model="basisVerzekering"
+                            :value="basisVerzekeringOptions[0]"
                         />
                         <label
                             for="radio-insurance-basis-budget"
@@ -32,11 +33,12 @@
                     <div class="badge radio__tile-badge">Meest gekozen</div>
                     <div class="radio custom-radio radio__option">
                         <input
-                            value="Basis Zeker"
                             type="radio"
                             name="radio-insurance"
                             id="radio-insurance-basis-zeker"
                             class="radio__input custom-control-input"
+                            v-model="basisVerzekering"
+                            :value="basisVerzekeringOptions[1]"
                         />
                         <label
                             for="radio-insurance-basis-zeker"
@@ -50,11 +52,12 @@
                 <div class="radio__tile">
                     <div class="radio custom-radio radio__option">
                         <input
-                            value="Basis Exclusief (Restitutie)"
                             type="radio"
                             name="radio-insurance"
                             id="radio-insurance-basis-exclusief-(restitutie)"
                             class="radio__input custom-control-input"
+                            v-model="basisVerzekering"
+                            :value="basisVerzekeringOptions[2]"
                         />
                         <label
                             for="radio-insurance-basis-exclusief-(restitutie)"
@@ -74,7 +77,10 @@
         <div class="form-input my-4">
             <div class="input__group">
                 <label class="input__title"> Kies je betaaltermijn </label>
-                <select class="form-control">
+                <select class="form-control" v-model="betaaltermijn">
+                    <option disabled value="">
+                        Geen betaaltermijn geselecteerd
+                    </option>
                     <option>per maand</option>
                     <option>per kwartaal</option>
                     <option selected>per jaar</option>
@@ -89,7 +95,14 @@
                 <label class="input__title">
                     Kies de hoogste van het eigen risico
                 </label>
-                <select class="form-control">
+                <select
+                    class="form-control"
+                    v-model="eigenRisico"
+                    :disabled="!basisVerzekering"
+                >
+                    <option disabled value="">
+                        Geen eigen risico geselecteerd
+                    </option>
                     <option>€ 385 - verplicht eigen risico</option>
                     <option>€ 885 - korting van € 22 per jaar</option>
                 </select>
@@ -108,8 +121,8 @@
                 <label class="input__title">
                     Kies uw aanvullende verzekering
                 </label>
-                <select class="form-control">
-                    <option selected>
+                <select class="form-control" v-model="aanvullendeVerzekering">
+                    <option disabled value="">
                         Geen aanvullende verzekering geselecteerd
                     </option>
                     <option>Aanvullend 1 - € 21,38 per jaar</option>
@@ -126,8 +139,8 @@
                 <label class="input__title">
                     Kies uw tandartsverzekering
                 </label>
-                <select class="form-control">
-                    <option selected>
+                <select class="form-control" v-model="tandartsverzekering">
+                    <option disabled value="">
                         Geen tandartsverzekering geselecteerd
                     </option>
                     <option>Tand 1 - € 80,28 per jaar</option>
@@ -138,3 +151,22 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            basisVerzekering: '',
+            betaaltermijn: '',
+            eigenRisico: '',
+            aanvullendeVerzekering: '',
+            tandartsverzekering: '',
+            basisVerzekeringOptions: [
+                'Basis Budget',
+                'Basis Zeker',
+                'Basis Exclusief (Restitutie)'
+            ]
+        };
+    }
+};
+</script>
