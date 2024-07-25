@@ -101,7 +101,8 @@
             <div class="input__group">
                 <label class="input__title"> Burgerservicenummer </label>
                 <input
-                    class="input__field form-control bsn is-invalid"
+                    class="input__field form-control bsn"
+                    :class="{ 'is-invalid': errors.bsn }"
                     type="text"
                     v-model="bsn"
                     @blur="validateBSN"
