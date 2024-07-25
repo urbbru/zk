@@ -115,7 +115,6 @@
                 <span class="bsn-error">{{ errors.bsn }}</span>
             </div>
         </div>
-        <button @click="se">se</button>
     </div>
 </template>
 
@@ -147,9 +146,6 @@ export default {
                     delete this.errors.bsn;
                 }
             }
-        },
-        se() {
-            console.log({ geslacht: this.geslacht });
         }
     }
 };
