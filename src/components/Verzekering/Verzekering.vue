@@ -76,8 +76,14 @@
     <div class="form-group">
         <div class="form-input my-4">
             <div class="input__group">
-                <label class="input__title"> Kies je betaaltermijn </label>
-                <select class="form-control" v-model="betaaltermijn">
+                <label class="input__title" for="betaaltermijn">
+                    Kies je betaaltermijn
+                </label>
+                <select
+                    class="form-control"
+                    v-model="betaaltermijn"
+                    id="betaaltermijn"
+                >
                     <option disabled value="">
                         Geen betaaltermijn geselecteerd
                     </option>
@@ -92,13 +98,14 @@
         <h3>Eigen risico</h3>
         <div class="form-input my-4">
             <div class="input__group">
-                <label class="input__title">
+                <label class="input__title" for="eigenRisico">
                     Kies de hoogste van het eigen risico
                 </label>
                 <select
                     class="form-control"
                     v-model="eigenRisico"
                     :disabled="!basisVerzekering"
+                    id="eigenRisico"
                 >
                     <option disabled value="">
                         Geen eigen risico geselecteerd
@@ -118,10 +125,14 @@
         </p>
         <div class="form-input my-4">
             <div class="input__group">
-                <label class="input__title">
+                <label class="input__title" for="aanvullendeVerzekering">
                     Kies uw aanvullende verzekering
                 </label>
-                <select class="form-control" v-model="aanvullendeVerzekering">
+                <select
+                    class="form-control"
+                    v-model="aanvullendeVerzekering"
+                    id="aanvullendeVerzekering"
+                >
                     <option disabled value="">
                         Geen aanvullende verzekering geselecteerd
                     </option>
@@ -136,10 +147,14 @@
     <div class="form-group">
         <div class="form-input my-4">
             <div class="input__group">
-                <label class="input__title">
+                <label class="input__title" for="tandartsverzekering">
                     Kies uw tandartsverzekering
                 </label>
-                <select class="form-control" v-model="tandartsverzekering">
+                <select
+                    class="form-control"
+                    v-model="tandartsverzekering"
+                    id="tandartsverzekering"
+                >
                     <option disabled value="">
                         Geen tandartsverzekering geselecteerd
                     </option>

@@ -3,11 +3,19 @@
     <div class="form-group">
         <h3>Reden van aanmelding</h3>
         <div class="form-input my-4">
-            <label id="aanmeldreden-label" class="input__title">
+            <label
+                id="aanmeldreden-label"
+                class="input__title"
+                for="redenAanvraag"
+            >
                 Wat is de reden van uw aanvraag?
             </label>
             <div class="input__group">
-                <select class="form-control" v-model="redenAanvraag">
+                <select
+                    class="form-control"
+                    v-model="redenAanvraag"
+                    id="redenAanvraag"
+                >
                     <option disabled value="">
                         Geen betaaltermijn geselecteerd
                     </option>
@@ -25,31 +33,39 @@
         <h3>Persoonlijke gegevens</h3>
         <div class="form-input my-4">
             <div class="input__group">
-                <label class="input__title">Naam</label>
+                <label class="input__title" for="naam">Naam</label>
                 <input
                     class="input__field form-control"
+                    id="naam"
                     type="text"
                     v-model="naam"
+                    placeholder="Voer jouw naam"
                 />
             </div>
         </div>
         <div class="form-input my-4">
             <div class="input__group">
-                <label class="input__title"> Tussenvoegsels </label>
+                <label class="input__title" for="tussenvoegsels">
+                    Tussenvoegsels
+                </label>
                 <input
+                    id="tussenvoegsels"
                     class="input__field form-control"
                     type="text"
+                    placeholder="Voer jouw tussenvoegsel"
                     v-model="tussenvoegsels"
                 />
             </div>
         </div>
         <div class="form-input my-4">
             <div class="input__group">
-                <label class="input__title">Achternaam</label>
+                <label class="input__title" for="achternaam">Achternaam</label>
                 <input
                     class="input__field form-control"
                     type="text"
+                    placeholder="Voer jouw achternaam"
                     v-model="achternaam"
+                    id="achternaam"
                 />
             </div>
         </div>
@@ -92,22 +108,29 @@
         </div>
         <div class="form-input my-4">
             <div class="input__group">
-                <label class="input__title"> Geboortedatum </label>
+                <label class="input__title" for="geboortedatum">
+                    Geboortedatum
+                </label>
                 <input
                     class="input__field form-control"
                     type="date"
+                    id="geboortedatum"
                     v-model="geboortedatum"
                 />
             </div>
         </div>
         <div class="form-input my-4">
             <div class="input__group">
-                <label class="input__title"> Burgerservicenummer </label>
+                <label class="input__title" for="bsn">
+                    Burgerservicenummer
+                </label>
                 <input
+                    id="bsn"
                     class="input__field form-control bsn"
                     :class="{ 'is-invalid': errors.bsn }"
                     type="text"
                     v-model="bsn"
+                    placeholder="Voer jouw BSN"
                     @blur="validateBSN"
                 />
             </div>
