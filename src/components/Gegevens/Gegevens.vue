@@ -7,7 +7,10 @@
                 Wat is de reden van uw aanvraag?
             </label>
             <div class="input__group">
-                <select class="form-control">
+                <select class="form-control" v-model="redenAanvraag">
+                    <option disabled value="">
+                        Geen betaaltermijn geselecteerd
+                    </option>
                     <option>
                         Nieuwe werkgever met collectiviteit bij Zilveren Kruis
                     </option>
@@ -116,22 +119,77 @@
                 <span class="bsn-error">{{ errors.bsn }}</span>
             </div>
         </div>
+        <button class="btn btn-cta-02" @click="goToVerzekering">
+            Ga verder naar verzekering
+        </button>
     </div>
 </template>
 
 <script>
+import { ref } from 'vue';
+import { useAanmeldenFormStore } from '../../stores/aanmeldenForm';
+
 export default {
+    setup() {
+        const aanmeldenFormStore = useAanmeldenFormStore();
+        const redenAanvraag = ref(
+            aanmeldenFormStore.gegevens.redenAanvraag || ''
+        );
+        const naam = ref(aanmeldenFormStore.gegevens.naam || '');
+        const tussenvoegsels = ref(
+            aanmeldenFormStore.gegevens.tussenvoegsels || ''
+        );
+        const achternaam = ref(aanmeldenFormStore.gegevens.achternaam || '');
+        const geslacht = ref(aanmeldenFormStore.gegevens.geslacht || '');
+        const geboortedatum = ref(
+            aanmeldenFormStore.gegevens.geboortedatum || ''
+        );
+        const bsn = ref(aanmeldenFormStore.gegevens.bsn || '');
+        const errors = ref({});
+
+        const goToVerzekering = () => {
+            if (!errors.value.bsn) {
+                if (
+                    redenAanvraag.value &&
+                    naam.value &&
+                    tussenvoegsels.value &&
+                    achternaam.value &&
+                    geslacht.value &&
+                    geboortedatum.value &&
+                    bsn.value
+                ) {
+                    aanmeldenFormStore.updateGegevens({
+                        redenAanvraag: redenAanvraag.value,
+                        naam: naam.value,
+                        tussenvoegsels: tussenvoegsels.value,
+                        achternaam: achternaam.value,
+                        geslacht: geslacht.value,
+                        geboortedatum: geboortedatum.value,
+                        bsn: bsn.value
+                    });
+
+                    aanmeldenFormStore.goToNextStep();
+                }
+            }
+        };
+
+        return {
+            aanmeldenFormStore,
+            goToVerzekering,
+            redenAanvraag,
+            naam,
+            tussenvoegsels,
+            achternaam,
+            geslacht,
+            geboortedatum,
+            bsn,
+            errors
+        };
+    },
     data() {
         return {
-            naam: '',
-            tussenvoegsels: '',
-            achternaam: '',
-            geslacht: '',
-            geboortedatum: '',
-            bsn: '',
             man: 'man',
-            vrouw: 'vrouw',
-            errors: {}
+            vrouw: 'vrouw'
         };
     },
     methods: {

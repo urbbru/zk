@@ -7,11 +7,15 @@
                 <div class="col-8">
                     <h1>Aanmelden</h1>
 
-                    <Gegevens />
-
-                    <Verzekering />
-
-                    <Controle />
+                    <div v-if="aanmeldenFormStore.currentStep === 0">
+                        <Gegevens />
+                    </div>
+                    <div v-if="aanmeldenFormStore.currentStep === 1">
+                        <Verzekering />
+                    </div>
+                    <div v-if="aanmeldenFormStore.currentStep === 2">
+                        <Controle />
+                    </div>
                 </div>
 
                 <ZKSidebar />
@@ -29,6 +33,7 @@ import ZKSidebar from '../ZKSidebar/ZKSidebar.vue';
 import Gegevens from '../Gegevens/Gegevens.vue';
 import Verzekering from '../Verzekering/Verzekering.vue';
 import Controle from '../Controle/Controle.vue';
+import { useAanmeldenFormStore } from '../../stores/aanmeldenForm';
 
 export default {
     components: {
@@ -38,6 +43,11 @@ export default {
         Gegevens,
         Verzekering,
         Controle
+    },
+    setup() {
+        const aanmeldenFormStore = useAanmeldenFormStore();
+
+        return { aanmeldenFormStore };
     }
 };
 </script>

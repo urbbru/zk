@@ -149,18 +149,73 @@
                 </select>
             </div>
         </div>
+        <button class="btn" @click="goToGegevens">Terug naar gegevens</button>
+        <button class="btn btn-cta-02" @click="goToControle">
+            Ga verder naar controle
+        </button>
     </div>
 </template>
 
 <script>
+import { ref } from 'vue';
+import { useAanmeldenFormStore } from '../../stores/aanmeldenForm';
+
 export default {
+    setup() {
+        const aanmeldenFormStore = useAanmeldenFormStore();
+        const basisVerzekering = ref(
+            aanmeldenFormStore.verzekering.basisVerzekering || ''
+        );
+        const betaaltermijn = ref(
+            aanmeldenFormStore.verzekering.betaaltermijn || ''
+        );
+        const eigenRisico = ref(
+            aanmeldenFormStore.verzekering.eigenRisico || ''
+        );
+        const aanvullendeVerzekering = ref(
+            aanmeldenFormStore.verzekering.aanvullendeVerzekering || ''
+        );
+        const tandartsverzekering = ref(
+            aanmeldenFormStore.verzekering.tandartsverzekering || ''
+        );
+
+        function goToGegevens() {
+            aanmeldenFormStore.goToPreviousStep();
+        }
+
+        function goToControle() {
+            if (
+                basisVerzekering.value &&
+                betaaltermijn.value &&
+                eigenRisico.value &&
+                aanvullendeVerzekering.value &&
+                tandartsverzekering.value
+            ) {
+                aanmeldenFormStore.updateVerzekering({
+                    basisVerzekering: basisVerzekering.value,
+                    betaaltermijn: betaaltermijn.value,
+                    eigenRisico: eigenRisico.value,
+                    aanvullendeVerzekering: aanvullendeVerzekering.value,
+                    tandartsverzekering: tandartsverzekering.value
+                });
+
+                aanmeldenFormStore.goToNextStep();
+            }
+        }
+
+        return {
+            aanmeldenFormStore,
+            goToControle,
+            goToGegevens,
+            basisVerzekering,
+            betaaltermijn,
+            eigenRisico,
+            aanvullendeVerzekering,
+            tandartsverzekering
+        };
+    },
     data() {
         return {
-            basisVerzekering: '',
-            betaaltermijn: '',
-            eigenRisico: '',
-            aanvullendeVerzekering: '',
-            tandartsverzekering: '',
             basisVerzekeringOptions: [
                 'Basis Budget',
                 'Basis Zeker',
