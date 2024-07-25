@@ -23,12 +23,12 @@
 </template>
 
 <script>
-import ZKHeader from './ZKHeader.vue';
-import ZKFooter from './ZKFooter.vue';
-import ZKSidebar from './ZKSidebar.vue';
-import Gegevens from './Gegevens.vue';
-import Verzekering from './Verzekering.vue';
-import Controle from './Controle.vue';
+import ZKHeader from '../ZKHeader/ZKHeader.vue';
+import ZKFooter from '../ZKFooter/ZKFooter.vue';
+import ZKSidebar from '../ZKSidebar/ZKSidebar.vue';
+import Gegevens from '../Gegevens/Gegevens.vue';
+import Verzekering from '../Verzekering/Verzekering.vue';
+import Controle from '../Controle/Controle.vue';
 
 export default {
     components: {

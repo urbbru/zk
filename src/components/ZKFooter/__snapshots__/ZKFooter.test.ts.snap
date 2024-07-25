@@ -1,0 +1,166 @@
+// Vitest Snapshot v1
+
+exports[`ZKFooter.vue > Should render correctly 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <!-- FOOTER -->
+  <div
+    class="ratingbar"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col-xs-12 col-sm-6 col-md-4 ratingbar__rating"
+        >
+          <a
+            class=""
+            href="https://www.independer.nl/zorgverzekering/fi/zilveren-kruis-ac.aspx"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Independer"
+              class="ratingbar__icon"
+              src="https://www.zilverenkruis.nl/-/media/zilverenkruis/images/shared/independer.png?rev=bb0602912ded4b16adc221025f3fc010&h=80&w=80&la=nl-NL&hash=39DBF59680B0FEECA97C6C786FC7DE67"
+              title="Independer"
+            />
+          </a>
+          <span>
+            <span
+              class="ratingbar__ratings-number"
+            >
+               7,8 
+            </span>
+            <span
+              class="ratingbar__ratings-text"
+            >
+               op Independer 
+            </span>
+          </span>
+        </div>
+        <div
+          class="col-xs-12 col-sm-6 col-md-4 ratingbar__rating"
+        >
+          <span>
+            <span
+              class="ratingbar__ratings-number"
+            >
+               3,8 miljoen 
+            </span>
+            <span
+              class="ratingbar__ratings-text"
+            >
+               klanten gingen u voor 
+            </span>
+          </span>
+        </div>
+        <div
+          class="col-xs-12 col-sm-6 col-md-4 ratingbar__rating"
+        >
+          <a
+            class=""
+            href="/consumenten/service/declareren/zilveren-kruis-app"
+          >
+            <img
+              alt="Logo Zilveren Kruis-app"
+              class="ratingbar__icon"
+              src="https://www.zilverenkruis.nl/-/media/zilverenkruis/images/app-logo/app_icon.png?rev=8665a8133399403b92b34eaada19bd46&h=80&w=80&la=nl-NL&hash=70AB973D0AB046A6EFA670CB38F2BF2E"
+            />
+          </a>
+          <span>
+            <span
+              class="ratingbar__ratings-number"
+            >
+               4,5 
+            </span>
+            <span
+              class="ratingbar__ratings-text"
+            >
+               beoordeling in App Store 
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer
+    class="main-footer"
+    role="contentinfo"
+  >
+    <div
+      class="container main-footer__grid"
+    >
+      <ul
+        class="main-footer__links-section list list--nostyle list--horiz d-flex"
+      >
+        <li
+          class="list__item"
+        >
+          <a
+            class="list__link"
+            href="/consumenten/disclaimer"
+          >
+            disclaimer 
+          </a>
+        </li>
+        <li
+          class="list__item"
+        >
+          <a
+            class="list__link"
+            href="/consumenten/privacy"
+          >
+            privacy 
+          </a>
+        </li>
+        <li
+          class="list__item"
+        >
+          <a
+            class="list__link"
+            href="/consumenten/veiligheid"
+          >
+            veiligheid 
+          </a>
+        </li>
+        <li
+          class="list__item"
+        >
+          <a
+            class="list__link"
+            href="/consumenten/cookies"
+          >
+            cookies 
+          </a>
+        </li>
+        <li
+          class="list__item"
+        >
+          <a
+            class="list__link"
+            href="https://www.wijzeringeldzaken.nl/verzekering/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+             wijzer in geldzaken 
+          </a>
+        </li>
+      </ul>
+      <div
+        class="main-footer__label-description"
+      >
+        <span>
+          Zilveren Kruis is onderdeel van Achmea
+        </span>
+      </div>
+    </div>
+  </footer>
+  
+</div>
+`;

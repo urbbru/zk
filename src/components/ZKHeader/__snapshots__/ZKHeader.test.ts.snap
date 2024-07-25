@@ -1,0 +1,237 @@
+// Vitest Snapshot v1
+
+exports[`ZKHeader.vue > Should render correctly 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <!-- HEADER -->
+  <header
+    aria-label="navigatie-header"
+    class="nav-main"
+    id="nav-main"
+  >
+    <div
+      class="nav-main__skip-links mb-3"
+    >
+      <a
+        class="list__link link--no-underline"
+        href="#navigatie-overslaan"
+      >
+         Navigatie overslaan 
+      </a>
+    </div>
+    <div
+      class="nav-main__grid container"
+    >
+      <!--LOGO-->
+      <a
+        class="nav-main__logo"
+        href="/consumenten"
+      >
+        <img
+          alt="Zilveren Kruis raad en daad logo"
+          class="nav-main__logo-img"
+          src="https://www.zilverenkruis.nl/assets/zilverenkruis/img/logo/logo_zilverenkruis.svg"
+        />
+      </a>
+      <div
+        class="nav-main__top-selections"
+      >
+        <a
+          class="nav-main__desktop link link--no-underline nav-main__desktop"
+          href="/zakelijk"
+        >
+           Zakelijk 
+        </a>
+        <a
+          class="nav-main__desktop link link--no-underline nav-main__desktop"
+          href="/zorgaanbieders"
+        >
+           Voor zorgaanbieders 
+        </a>
+        <a
+          class="nav-main__desktop link link--no-underline nav-main__mobile"
+          href="/overons"
+        >
+           Over ons 
+        </a>
+        <a
+          class="nav-main__desktop link link--no-underline nav-main__mobile"
+          href="/overons/pers"
+        >
+           Pers 
+        </a>
+      </div>
+      <nav
+        aria-label="hoofdnavigatie"
+        class="nav-main__main-menu"
+        role="navigation"
+      >
+        <ul
+          class="main-menu__list list list--nostyle"
+          id="main-menu__list"
+        >
+          <li
+            class="main-menu__item"
+            data-has-section="false"
+          >
+            <a
+              class="main-menu__title link--no-underline"
+              href="/consumenten"
+              title="Naar de homepage van Zilveren Kruis voor consumenten"
+            >
+               Home 
+            </a>
+          </li>
+          <li
+            class="main-menu__item"
+            data-has-section="true"
+            data-section-count="3"
+          >
+            <a
+              aria-expanded="false"
+              aria-haspopup="true"
+              class="main-menu__title link--no-underline"
+              href="#"
+            >
+               Verzekeringen 
+            </a>
+          </li>
+          <li
+            class="main-menu__item"
+            data-has-section="true"
+            data-section-count="2"
+          >
+            <a
+              aria-expanded="false"
+              aria-haspopup="true"
+              class="main-menu__title link--no-underline"
+              href="#"
+            >
+               Vergoedingen 
+            </a>
+          </li>
+          <li
+            class="main-menu__item"
+            data-has-section="true"
+            data-section-count="2"
+          >
+            <a
+              aria-expanded="false"
+              aria-haspopup="true"
+              class="main-menu__title link--no-underline"
+              href="#"
+            >
+               Zorg regelen 
+            </a>
+          </li>
+          <li
+            class="main-menu__item"
+            data-has-section="true"
+            data-section-count="1"
+          >
+            <a
+              aria-expanded="false"
+              aria-haspopup="true"
+              class="main-menu__title link--no-underline"
+              href="#"
+            >
+               Betalen 
+            </a>
+          </li>
+          <li
+            class="main-menu__item"
+            data-has-section="true"
+            data-section-count="2"
+          >
+            <a
+              aria-expanded="false"
+              aria-haspopup="true"
+              class="main-menu__title link--no-underline"
+              href="#"
+            >
+               Gezonder leven 
+            </a>
+          </li>
+          <li
+            class="main-menu__item"
+            data-has-section="true"
+            data-section-count="1"
+          >
+            <a
+              aria-expanded="false"
+              aria-haspopup="true"
+              class="main-menu__title link--no-underline"
+              href="#"
+            >
+               Service & Contact 
+            </a>
+          </li>
+          <li
+            class="main-menu__item nav-main__mobile"
+            data-has-section="false"
+          >
+            <a
+              class="main-menu__title link--no-underline nav-main__desktop"
+              href="/zakelijk"
+            >
+               Zakelijk 
+            </a>
+          </li>
+          <li
+            class="main-menu__item nav-main__mobile"
+            data-has-section="false"
+          >
+            <a
+              class="main-menu__title link--no-underline nav-main__desktop"
+              href="/zorgaanbieders"
+            >
+               Voor zorgaanbieders 
+            </a>
+          </li>
+          <li
+            class="main-menu__item nav-main__mobile"
+            data-has-section="false"
+          >
+            <a
+              class="main-menu__title link--no-underline"
+              href="https://www.zilverenkruis.nl/en/consumenten"
+            >
+               English 
+            </a>
+          </li>
+          <li
+            class="main-menu__item nav-main__mobile"
+            data-has-section="false"
+          >
+            <a
+              class="main-menu__title link--no-underline nav-main__mobile"
+              href="/overons"
+            >
+               Over ons 
+            </a>
+          </li>
+          <li
+            class="main-menu__item nav-main__mobile"
+            data-has-section="false"
+          >
+            <a
+              class="main-menu__title link--no-underline nav-main__mobile"
+              href="/overons/pers"
+            >
+               Pers 
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <a
+      id="navigatie-overslaan"
+      name="navigatie-overslaan"
+      tabindex="-1"
+    />
+  </header>
+  
+</div>
+`;

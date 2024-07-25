@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`Gegevens.vue > Should render correctly 1`] = `
+<h2>
+  Gegevens
+</h2>
+`;
